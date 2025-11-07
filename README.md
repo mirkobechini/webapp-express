@@ -9,8 +9,8 @@ Ciao ragazzi, è ora di mettere alla prova le vostre conoscenze iniziando a cost
 
 ## Bonus
 - [] Inserire le immagini nel progetto express
-- [] Inserire i dati di connessione al database come variabili d’ambiente
-- [] Inserire le vostre API in controller
+- [X] Inserire i dati di connessione al database come variabili d’ambiente
+- [X] Inserire le vostre API in controller
 - [] Inserire le vostre rotte in un router
 - [] Inserire un middleware per le rotte inesistenti
 - [] Inserire un middleware per la gestione errori
