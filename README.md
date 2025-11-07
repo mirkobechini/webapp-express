@@ -12,5 +12,5 @@ Ciao ragazzi, è ora di mettere alla prova le vostre conoscenze iniziando a cost
 - [X] Inserire i dati di connessione al database come variabili d’ambiente
 - [X] Inserire le vostre API in controller
 - [X] Inserire le vostre rotte in un router
-- [] Inserire un middleware per le rotte inesistenti
-- [] Inserire un middleware per la gestione errori
+- [X] Inserire un middleware per le rotte inesistenti
+- [X] Inserire un middleware per la gestione errori
