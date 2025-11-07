@@ -2,9 +2,10 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT
 
+//Routes
 const movieRouter = require("./router/movie")
 
-
+//Middleware
 const notFound = require("./middleware/notFound")
 const serverError = require("./middleware/serverError")
 
@@ -16,6 +17,7 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("home")
 })
+
 
 app.use("/api/movies", movieRouter)
 
