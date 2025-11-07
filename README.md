@@ -8,7 +8,7 @@ Ciao ragazzi, è ora di mettere alla prova le vostre conoscenze iniziando a cost
 - [X] Prepariamo una rotta show per ottenere i dettagli di un singolo film e le sue recensioni
 
 ## Bonus
-- [] Inserire le immagini nel progetto express
+- [X] Inserire le immagini nel progetto express
 - [X] Inserire i dati di connessione al database come variabili d’ambiente
 - [X] Inserire le vostre API in controller
 - [X] Inserire le vostre rotte in un router

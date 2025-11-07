@@ -9,6 +9,8 @@ const movieRouter = require("./router/movie")
 const notFound = require("./middleware/notFound")
 const serverError = require("./middleware/serverError")
 
+app.use(express.static('public'));
+
 app.listen(PORT, () => {
     console.log(`Connected to http://localhost:${PORT}`);
 
