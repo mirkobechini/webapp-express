@@ -14,3 +14,4 @@ Ciao ragazzi, è ora di mettere alla prova le vostre conoscenze iniziando a cost
 - [X] Inserire le vostre rotte in un router
 - [X] Inserire un middleware per le rotte inesistenti
 - [X] Inserire un middleware per la gestione errori
+- [X] open cors policy
