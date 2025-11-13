@@ -33,8 +33,11 @@ function show(req, res) {
 function store(req, res) {
 
     const { title, director, genre, release_year, abstract } = req.body
-    const image = req.file.originalname
+    const image = 'http://localhost:3000/uploads/' + req.file.originalname
 
+    console.log(image);
+    console.log(title, director, genre, release_year, abstract);
+    
     const sql = "INSERT INTO movies (title, director, genre, release_year, abstract, image) VALUES (?, ?, ?, ?, ?, ?) "
 
     connection.query(sql, [title, director, genre, release_year, abstract, image], (err, result) => {
