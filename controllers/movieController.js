@@ -47,6 +47,17 @@ function store(req, res) {
 
 }
 
+function destroy(req, res){
+    const movie_id = Number(req.params.id)
+    const sql = "DELETE FROM movies WHERE id = ?"
+    
+    connection.query(sql, [movie_id], (err, result)=>{
+        if(err) return res.status(500).json({error: err.message})
+        res.status(204).json({message: `Movie with id ${movie_id} deleted`})
+    })
+    
+}
+
 function storeReviews(req, res) {
 
     console.log(req.body);
@@ -63,4 +74,4 @@ function storeReviews(req, res) {
     })
 }
 
-module.exports = { index, show, store, storeReviews }
+module.exports = { index, show, store, storeReviews, destroy }
