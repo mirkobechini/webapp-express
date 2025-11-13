@@ -30,25 +30,34 @@ function show(req, res) {
 }
 
 
-function store(req, res){
-    
-    console.log(req.body);
+function store(req, res) {
+
+    const { title, director, genre, release_year, abstract } = req.body
+    const image = req.file.originalname
 
     const sql = "INSERT INTO movies (title, director, genre, release_year, abstract, image) VALUES (?, ?, ?, ?, ?, ?) "
-    
+
+    connection.query(sql, [title, director, genre, release_year, abstract, image], (err, result) => {
+        if (err) return res.status(500).json({ error: err.message })
+        res.json({ message: "Movie added" })
+    })
 
 }
 
-function storeReviews(req, res){
-    
+function storeReviews(req, res) {
+
     console.log(req.body);
-    
+
+    const movie_id = Number(req.params.id)
+    const { name, text, vote} = req.body
 
     const sql = "INSERT INTO reviews (movie_id, name, text, vote) VALUES (?, ?, ?, ?) "
 
-    const movie_id = Number(req.params.id)
 
-    res.json(req.body)
+    connection.query(sql, [movie_id,name, text, vote], (err, result) => {
+        if (err) return res.status(500).json({ error: err.message })
+        res.json({ message: "Review added" })
+    })
 }
 
-module.exports = {index, show, store, storeReviews}
+module.exports = { index, show, store, storeReviews }
