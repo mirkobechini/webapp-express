@@ -29,4 +29,26 @@ function show(req, res) {
     })
 }
 
-module.exports = {index, show}
+
+function store(req, res){
+    
+    console.log(req.body);
+
+    const sql = "INSERT INTO movies (title, director, genre, release_year, abstract, image) VALUES (?, ?, ?, ?, ?, ?) "
+    
+
+}
+
+function storeReviews(req, res){
+    
+    console.log(req.body);
+    
+
+    const sql = "INSERT INTO reviews (movie_id, name, text, vote) VALUES (?, ?, ?, ?) "
+
+    const movie_id = Number(req.params.id)
+
+    res.json(req.body)
+}
+
+module.exports = {index, show, store, storeReviews}
