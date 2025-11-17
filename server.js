@@ -13,6 +13,7 @@ const serverError = require("./middleware/serverError")
 app.use(express.static('public'));
 
 app.use(cors())
+app.use(express.json())
 
 //{origin: "http:/localhost:5173/"}
 

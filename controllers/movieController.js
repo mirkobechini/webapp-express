@@ -70,7 +70,6 @@ function destroy(req, res) {
 
 function storeReviews(req, res) {
 
-    console.log(req.body);
 
     const movie_id = Number(req.params.id)
     const { name, text, vote } = req.body
